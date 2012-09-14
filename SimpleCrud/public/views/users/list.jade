@@ -1,0 +1,17 @@
+h2 List of all users
+
+table
+ tr
+  th(style='width:50px') ID
+  th Login
+  th Senha
+  th(style='width:80px') Edit
+  th(style='width:80px') Delete
+ - for (var id in users) 
+  tr
+   td #{users[id]['users_id']}
+   td #{users[id]['login']}
+   td #{users[id]['pass']}
+   td <a href="/users/edit/#{users[id]['users_id']}">Edit</a>
+   td <a href="/users/delete/#{users[id]['users_id']}">Delete</a>
+   

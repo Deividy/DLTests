@@ -1,0 +1,9 @@
+h2 Add a user
+
+div
+ form(action='/users/save',method='post')
+  input(id='login',type='text',value='#{user.login}',placeholder='login', name='login')
+  input(id='pass',type='password',value='',placeholder='password', name='password')
+  input(id='id',type='hidden',value='#{user.users_id}',placeholder='id', name='id')
+
+  input(type='submit',value='Save',data-transition='fade', data-theme='c')  
